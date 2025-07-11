@@ -6,7 +6,90 @@
   <title>Difesa dal Social Engineering</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
   <style>
-    /* Inserisci qui lo stesso CSS del tuo esempio originale */
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+    nav {
+      background-color: #222;
+      padding: 1rem;
+      display: flex;
+      justify-content: center;
+    }
+    nav a {
+      color: #fff;
+      margin: 0 1rem;
+      text-decoration: none;
+    }
+    .hero {
+      background-color: #004466;
+      color: #fff;
+      padding: 3rem 1rem;
+      text-align: center;
+    }
+    .section {
+      padding: 2rem 1rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .card {
+      background: white;
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      flex: 1 1 calc(33% - 1rem);
+      min-width: 250px;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      max-width: 500px;
+      margin: 2rem auto;
+      background: white;
+      padding: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    input, textarea {
+      padding: 0.75rem;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    button {
+      background-color: #004466;
+      color: white;
+      border: none;
+      padding: 0.75rem;
+      font-size: 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #006699;
+    }
+    iframe {
+      border: 0;
+      width: 100%;
+      height: 300px;
+      border-radius: 8px;
+    }
+    footer {
+      background: #222;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+    }
   </style>
 </head>
 <body>
@@ -25,50 +108,71 @@
 
 <main>
 
-  <section id="chi-siamo" tabindex="-1" class="section" aria-labelledby="chi-siamo-title">
+  <section id="chi-siamo" class="section" aria-labelledby="chi-siamo-title">
     <h2 id="chi-siamo-title">Chi siamo</h2>
-    <p>Siamo un gruppo di professionisti nella sicurezza umana e psicologica del mondo digitale. Analizziamo le vulnerabilità umane, formiamo il personale e progettiamo strategie per prevenire frodi e attacchi basati sull'inganno.</p>
-    <p>Combattiamo le minacce più subdole: phishing, vishing, pretexting, baiting, shoulder surfing e altre tecniche di manipolazione sociale.</p>
+    <p>Siamo esperti in sicurezza umana e digitale. Aiutiamo aziende e individui a proteggersi dalle minacce sociali come phishing, pretexting, vishing, smishing e altri attacchi di ingegneria sociale.</p>
   </section>
 
   <section id="servizi" class="section" aria-labelledby="servizi-title">
     <h2 id="servizi-title">I nostri servizi</h2>
     <div class="cards" role="list">
-      <article class="card" tabindex="0" role="listitem">
+      <article class="card" role="listitem">
         <h3>Simulazioni di phishing</h3>
-        <p>Test reali per valutare la vulnerabilità dei dipendenti agli attacchi di phishing e spear phishing.</p>
+        <p>Valuta la preparazione del tuo team con attacchi simulati realistici.</p>
       </article>
-      <article class="card" tabindex="0" role="listitem">
-        <h3>Formazione sul social engineering</h3>
-        <p>Corsi pratici per riconoscere le tecniche di ingegneria sociale e reagire in modo corretto.</p>
+      <article class="card" role="listitem">
+        <h3>Formazione interattiva</h3>
+        <p>Corsi specifici su phishing, vishing, smishing e inganni digitali.</p>
       </article>
-      <article class="card" tabindex="0" role="listitem">
-        <h3>Valutazione comportamentale</h3>
-        <p>Analisi dei punti deboli umani e definizione di policy aziendali contro l'ingegneria sociale.</p>
+      <article class="card" role="listitem">
+        <h3>Audit comportamentali</h3>
+        <p>Analisi del fattore umano per rafforzare la sicurezza interna.</p>
       </article>
-      <article class="card" tabindex="0" role="listitem">
-        <h3>Protezione da pretexting</h3>
-        <p>Difese contro chi si finge qualcun altro per ottenere accesso a dati o sistemi riservati.</p>
+      <article class="card" role="listitem">
+        <h3>Difesa da pretexting</h3>
+        <p>Soluzioni per impedire che attori malevoli si fingano persone fidate.</p>
       </article>
-      <article class="card" tabindex="0" role="listitem">
-        <h3>Difesa da vishing & smishing</h3>
-        <p>Strategie per identificare chiamate e messaggi ingannevoli che puntano al furto di informazioni.</p>
+      <article class="card" role="listitem">
+        <h3>Protezione vishing/smishing</h3>
+        <p>Difese contro truffe via telefono o SMS.</p>
       </article>
-      <article class="card" tabindex="0" role="listitem">
-        <h3>Audit fisici e test sul campo</h3>
-        <p>Simulazioni di accesso fisico non autorizzato per testare la sicurezza degli ambienti aziendali.</p>
+      <article class="card" role="listitem">
+        <h3>Test sul campo</h3>
+        <p>Simulazioni fisiche per testare la prontezza del personale.</p>
       </article>
     </div>
   </section>
 
   <section id="notizie" class="section" aria-labelledby="notizie-title">
     <h2 id="notizie-title">Notizie & approfondimenti</h2>
-    <p>Segui le ultime tendenze e minacce nel mondo del social engineering. Pubblicazioni aggiornate, analisi di casi reali e consigli utili per migliorare la tua difesa personale e aziendale.</p>
+    <p>Scopri gli ultimi attacchi, tecniche emergenti e consigli pratici per migliorare la tua sicurezza digitale.</p>
   </section>
 
   <section id="contatti" class="section" aria-labelledby="contatti-title">
     <h2 id="contatti-title">Contattaci</h2>
-    <p>Hai subito un attacco o vuoi mettere alla prova la tua azienda? Scrivici: <a href="mailto:sicurezza@tuaazienda.it">sicurezza@tuaazienda.it</a></p>
+    <p>Hai subito un attacco o vuoi proteggere la tua azienda? Scrivici oppure compila il modulo per ricevere informazioni personalizzate.</p>
+
+    <form action="mailto:sicurezza@tuaazienda.it" method="post" enctype="text/plain">
+      <label for="nome">Nome</label>
+      <input type="text" id="nome" name="nome" required>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="messaggio">Messaggio</label>
+      <textarea id="messaggio" name="messaggio" rows="5" required></textarea>
+
+      <button type="submit">Invia richiesta</button>
+    </form>
+
+    <h3>Dove siamo</h3>
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11561.123456789!2d12.492231!3d41.890251!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132f61aafc4cb3c9%3A0xb6fcd8a49b8f3450!2sRoma!5e0!3m2!1sit!2sit!4v123456789"
+      allowfullscreen=""
+      loading="lazy"
+      title="Mappa della sede"
+      aria-label="Mappa interattiva della sede aziendale">
+    </iframe>
   </section>
 
 </main>
